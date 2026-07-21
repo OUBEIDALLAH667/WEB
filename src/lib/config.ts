@@ -1,7 +1,7 @@
 // Configuration et constantes AB.TECHNILOGIE
 
 // Numéro WhatsApp de l'entreprise (format international sans +)
-export const WHATSAPP_NUMBER = '22790000000'; // À remplacer par le vrai numéro
+export const WHATSAPP_NUMBER = '2279881819'; // À remplacer par le vrai numéro
 
 export const COMPANY = {
   name: 'AB.TECHNILOGIE',
@@ -10,33 +10,7 @@ export const COMPANY = {
   phone: '+227 98818219',
   email: 'contact@abtechnilogie.ne',
   address: 'Niamey, Niger',
-};
-
-export function formatFCFA(amount: number): string {
-  return new Intl.NumberFormat('fr-FR').format(amount) + ' FCFA';
-}
-
-export function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('fr-FR', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric',
-  });
-}
-
-export function formatDateTime(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('fr-FR', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
-}
-
-export function buildWhatsAppUrl(message: string): string {
-  const encoded = encodeURIComponent(message);
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+}+{encoded}`;
 }
 
 // Emoji par défaut selon la catégorie de produit
