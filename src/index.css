@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #040614;
+  color: #E8EAF0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated mesh gradient background with blue + orange halos */
+.bg-mesh {
+  background-color: #040614;
+  background-image:
+    radial-gradient(at 15% 15%, rgba(0, 102, 255, 0.18) 0px, transparent 50%),
+    radial-gradient(at 85% 10%, rgba(255, 107, 0, 0.10) 0px, transparent 50%),
+    radial-gradient(at 50% 85%, rgba(0, 102, 255, 0.12) 0px, transparent 50%),
+    radial-gradient(at 90% 60%, rgba(255, 107, 0, 0.07) 0px, transparent 50%),
+    radial-gradient(at 30% 60%, rgba(51, 126, 255, 0.06) 0px, transparent 50%);
+}
+
+/* Floating halo orbs for section backgrounds */
+.halo-blue {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.halo-orange {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.14) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(12, 15, 34, 0.5);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(7, 9, 24, 0.85);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(20, 24, 48, 0.4);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(30, 35, 64, 0.55);
+  border-color: rgba(255, 107, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px -10px rgba(255, 107, 0, 0.18), 0 0 0 1px rgba(255, 107, 0, 0.1);
+}
+
+/* Electric blue glow */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+}
+
+.glow-blue-strong {
+  box-shadow: 0 0 50px rgba(0, 102, 255, 0.5), 0 0 20px rgba(0, 102, 255, 0.3);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #337EFF 0%, #0066FF 50%, #99BFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-bo {
+  background: linear-gradient(135deg, #0066FF 0%, #FF6B00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-subtle {
+  background: linear-gradient(135deg, #E8EAF0 0%, #99BFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(7, 9, 24, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 255, 0.5);
+}
+
+/* Input styling for dark glass UI */
+.input-glass {
+  background: rgba(20, 24, 48, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.input-glass:focus {
+  background: rgba(30, 35, 64, 0.6);
+  border-color: rgba(0, 102, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+}
+
+.input-glass::placeholder {
+  color: rgba(155, 161, 184, 0.6);
+}
+
+/* Shimmer loading effect */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 24, 48, 0.4) 0%,
+    rgba(30, 35, 64, 0.6) 50%,
+    rgba(20, 24, 48, 0.4) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Button hover effects */
+.btn-electric {
+  background: linear-gradient(135deg, #0066FF 0%, #337EFF 100%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.25);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8533 100%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.25);
+}
+
+.btn-orange::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-orange:hover::before {
+  left: 100%;
+}
+
+.btn-orange:hover {
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-electric::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-electric:hover::before {
+  left: 100%;
+}
+
+.btn-electric:hover {
+  box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Noise texture overlay */
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
