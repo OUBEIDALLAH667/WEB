@@ -7,7 +7,7 @@ export const COMPANY = {
   name: 'AB.TECHNILOGIE',
   city: 'Niamey',
   country: 'Niger',
-  phone: '+227 90 00 00 00',
+  phone: '+227 98818210',
   email: 'contact@abtechnilogie.ne',
   address: 'Niamey, Niger',
 };
