@@ -1,7 +1,7 @@
 // Configuration et constantes AB.TECHNILOGIE
 
 // Numéro WhatsApp de l'entreprise (format international sans +)
-export const WHATSAPP_NUMBER = '22790000000'; // À remplacer par le vrai numéro
+export const WHATSAPP_NUMBER = '22798818219'; // À remplacer par le vrai numéro
 
 export const COMPANY = {
   name: 'AB.TECHNILOGIE',
